@@ -4,7 +4,7 @@ const app = express();
 app.use(express.static('dist'));
 app.use('/roxe-merchant-cbdc', proxy("http://roxe-gateway-sandbox.roxe.pro",{
   proxyReqPathResolver:(req) => {
-    return '/roxe-merchant-cbdc' + req.path;
+    return '/roxe-merchant-cbdc' + req.url;
   }
 }));
 app.all("*",(req,res) => {
