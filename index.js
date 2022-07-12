@@ -11,4 +11,4 @@ app.all("*",(req,res) => {
   console.log(`path:${req.path}`)
   res.status(404).send("not found");
 })
-app.listen(3000);
+app.listen(4200);
